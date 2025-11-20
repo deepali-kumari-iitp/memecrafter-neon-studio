@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>MemeCrafter</title>
+</head>
+<body>
+    <div class="page">
+    <aside class="sidebar card">
+      <div class="brand">
+        <div class="logo">MF</div>
+        <div class="brand-text">
+          <h1>MemeForge</h1>
+          <p class="subtitle">Neon Studio • Drag • Resize • Stickers</p>
+        </div>
+      </div>
+
+      <div class="control-block">
+        <label class="label">Upload Image</label>
+        <input id="file" type="file" accept="image/*" class="file-input"/>
+      </div>
+
+      <div class="control-block">
+        <label class="label">Canvas Size</label>
+        <div class="size-row">
+          <button class="size-btn" data-size="1080">Square</button>
+          <button class="size-btn" data-size="1280x720">Wide</button>
+          <button class="size-btn" data-size="720x1280">Portrait</button>
+        </div>
+        <button class="size-btn custom" data-size="custom">Custom</button>
+      </div>
+
+      <div class="control-block">
+        <label class="label">Add Text</label>
+        <div class="row">
+          <input id="add-text" class="text-field" placeholder="Write and press Add" />
+          <button id="add-text-btn" class="neon-btn">Add</button>
+        </div>
+      </div>
+
+      <div class="control-block">
+        <label class="label">Stickers & Emojis</label>
+        <div id="stickers" class="stickers-grid"></div>
+      </div>
+
+      <div class="control-block small">
+        <div class="row space-between">
+          <button id="bring-forward" class="ghost-btn">Bring ↑</button>
+          <button id="send-back" class="ghost-btn">Send ↓</button>
+        </div>
+        <div class="row space-between" style="margin-top:10px;">
+          <button id="download" class="neon-btn big">Download</button>
+          <button id="reset" class="ghost-btn">Reset</button>
+        </div>
+      </div>
+
+      <p class="hint">Tip: Tap an element to select. Drag to move. Use corner for resize and the top handle to rotate. Double-click text to edit.</p>
+    </aside>
+
+    <main class="stage-area">
+      <div class="stage-card card">
+        <div class="stage-header">
+          <h2>Canvas Preview</h2>
+          <div class="muted">Responsive • Export-ready</div>
+        </div>
+
+        <div id="stage" class="stage" style="width:800px;height:800px;">
+          <div id="stage-inner" class="stage-inner">
+            <img id="bg-img" class="bg" alt="background" draggable="false" style="display:none;" />
+            <!-- items injected here -->
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+    <script src="js\main.js"></script>
+</body>
+</html>
