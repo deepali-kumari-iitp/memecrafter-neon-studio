@@ -1,8 +1,3 @@
-/* -------------------------
-   MemeForge — Neon Studio CSS
-   Rounded cards • Neon accents • Soft 3D
-   ------------------------- */
-
 :root{
   --bg1: #0f1724;
   --bg2: #0b1020;
@@ -227,10 +222,7 @@ html,body{
   align-items:center;
 }
 
-.muted{
-  color:var(--muted);
-  font-size:13px;
-}
+
 
 /* Canvas */
 .stage{

@@ -1,9 +1,3 @@
-/* script.js
-   Clean, modular, commented.
-   Features: upload bg, add text, add stickers/emojis,
-   drag, resize, rotate, layer controls, download PNG.
-*/
-
 (function () {
   // --- helper data (stickers/emojis) ---
   const stickerSvgs = {
@@ -137,10 +131,10 @@
     refs.stageInner.appendChild(el);
   }
 
-  // -------------------------------------------
+
   // MAKE ELEMENT INTERACTIVE
   // NO OUTLINE ADDED HERE!
-  // -------------------------------------------
+
   function makeInteractive(el) {
     el.dataset.rotate = 0;
 
@@ -185,7 +179,7 @@
     selected.classList.add('active');
   }
 
-  // --- Layer Controls ---
+  //  Layer Controls
   refs.bringForward.addEventListener('click', () => {
     if (!selected) return;
     selected.style.zIndex =
@@ -198,7 +192,7 @@
       (Number(selected.style.zIndex) || 10) - 1;
   });
 
-  // --- Drag ---
+  // Drag 
   function startDrag(e, el) {
     e.preventDefault();
 
@@ -235,7 +229,7 @@
     window.addEventListener('pointerup', onUp);
   }
 
-  // --- Resize ---
+  // Resize
   function startResize(e, el) {
     e.preventDefault();
 
@@ -259,7 +253,7 @@
     window.addEventListener('pointerup', onUp);
   }
 
-  // --- Rotate ---
+  // Rotate
   function startRotate(e, el) {
     e.preventDefault();
 
@@ -284,7 +278,7 @@
     window.addEventListener('pointerup', onUp);
   }
 
-  // --- draw image helper ---
+  // draw image helper
   function drawImageToCanvas(ctx, imgEl, w, h, dx = 0, dy = 0) {
     return new Promise((resolve) => {
       const img = new Image();
@@ -303,7 +297,7 @@
     });
   }
 
-  // --- Export PNG ---
+  // Export PNG
   refs.downloadBtn.addEventListener('click', async () => {
     const w = refs.stage.clientWidth;
     const h = refs.stage.clientHeight;
@@ -402,7 +396,7 @@
     a.click();
   });
 
-  // --- Reset Canvas ---
+  // Reset Canvas
   refs.resetBtn.addEventListener("click", () => {
     if (!confirm("Clear canvas and remove all elements?")) return;
 
@@ -416,7 +410,7 @@
     selected = null;
   });
 
-  // --- Deselect when clicking blank area ---
+  // Deselect when clicking blank area
   refs.stageInner.addEventListener("pointerdown", (e) => {
     if (e.target === refs.stageInner || e.target === refs.bgImg) {
       if (selected) selected.classList.remove("active");
@@ -424,7 +418,7 @@
     }
   });
 
-  // --- Init ---
+  //  Init 
   setStageSize(800, 800);
   initStickers();
 })();
