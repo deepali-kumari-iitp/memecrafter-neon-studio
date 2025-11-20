@@ -46,19 +46,19 @@ It’s fully responsive and built using **HTML, CSS, JavaScript** — no framewo
 
 ---
 
-## 📌 Screenshots
+## 📸 Screenshots
 
-### 🟣 **1. Project Initial View**
-<img src="assets/ss-01-project-initial.png" width="600"/>
+### 🟣 Project Initial Screen
+![Initial](asset/screenshots/project-initial.png)
 
-### 🟦 **2. After Setting Square Canvas**
-<img src="assets/ss-02-canvas-square.png" width="600"/>
+### 🟦 Square Canvas Selected
+![Canvas Square](asset/screenshots/canvas-square.png)
 
-### 🟡 **3. Meme Editing (Text + Stickers)**
-<img src="assets/ss-03-meme-editing.png" width="600"/>
+### 🟡 Editing Meme
+![Editing Meme](asset/screenshots/meme-editing.png)
 
-### 💗 **4. Final Exported Meme Output**
-<img src="assets/ss-04-meme-output.png" width="600"/>
+### 💗 Final Meme Output
+![Output](asset/screenshots/meme-output.png)
 
 ---
 
@@ -72,18 +72,16 @@ It’s fully responsive and built using **HTML, CSS, JavaScript** — no framewo
 
 ## 📂 Folder Structure
 MemeCrafter/
-│
-├── index.html
-├── css/
-│ └── style.css
-├── js/
-│ └── main.js
-└── assets/
-├── ss-01-project-initial.png
-├── ss-02-canvas-square.png
-├── ss-03-meme-editing.png
-└── ss-04-meme-output.png
-
+ ├── asset/
+ │   └── screenshots/
+ │        ├── project-initial.png
+ │        ├── canvas-square.png
+ │        ├── meme-editing.png
+ │        └── meme-output.png
+ ├── css/
+ ├── js/
+ ├── index.html
+ └── README.md
 
 ---
 
